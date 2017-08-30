@@ -1,12 +1,12 @@
 ngx_slab_stat
 ==============
 
-This module provides access to information of slab usage for nginx shared memory.
+This module provides access to information of slab usage for nginx/tengine shared memory.
 
 Example
 =======
 
-Get information of worker process
+Get information of slab and free page usage.
 ---------------------------------
 
 ```
@@ -21,7 +21,7 @@ Get information of worker process
  }
 ```
 
-Requesting URI /slab_stat, you will get information of pages and slab usage for nginx shared memory.
+Requesting URI /slab_stat, you will get information of slab and free page usage for nginx/tengine shared memory.
 The output page may look like as follows:
 
 ```
@@ -46,7 +46,7 @@ Get information of shared memory usage
 Data
 ====
 
-Every line except the last one of output content has the same format, as follows:
+Every line except the first three of output content has the same format, as follows:
 
 * __shared memory__: name of current shared memory zone
 
